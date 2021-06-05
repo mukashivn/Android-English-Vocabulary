@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_xlarge">
+
+    <com.core.app.ui.custom.NativeAdsView
+        android:id="@+id/ads_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="sans-serif"
+            android:text="@string/dialog_learn_title"
+            android:textColor="#263238"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/cmd_dissmis"
+            style="@style/ImageViewStyle"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icc_clear" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:background="@drawable/bg_rect_gray">
+
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin_short"
+            android:scaleType="fitCenter"
+            tools:src="@drawable/beach" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:layout_margin="@dimen/margin_short"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/cmd_sound_normal"
+                style="@style/ImageViewStyle"
+                android:background="@android:color/transparent"
+                android:padding="@dimen/margin_short"
+                android:src="@drawable/icc_volume_up"
+                android:tint="@color/colorTint"
+            />
+
+            <ImageButton
+                android:id="@+id/cmd_sound_slow"
+                style="@style/ImageViewStyle"
+                android:tint="@color/colorTint"
+                android:background="@android:color/transparent"
+                android:padding="@dimen/margin_short"
+                android:src="@drawable/icc_slow" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/word_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/margin_short"
+        android:textColor="#263238"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        tools:text="Text Here" />
+
+    <TextView
+        android:id="@+id/how_to_read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/margin_short"
+        android:textColor="#546e7a"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        tools:text="[bɔi]" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_xlarge" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/meaning"
+        android:textColor="#263238"
+        android:textSize="14sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/word_meaning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:paddingEnd="@dimen/margin_short"
+        android:paddingStart="@dimen/margin_short"
+        android:textColor="#546e7a"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        tools:text="a male child" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_standard" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/example"
+        android:textColor="#263238"
+        android:textSize="14sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/example_sentence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:paddingEnd="@dimen/margin_short"
+        android:paddingStart="@dimen/margin_short"
+        android:textColor="#8a000000"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        tools:text="I haven’t been camping since I was a little boy." />
+</LinearLayout>

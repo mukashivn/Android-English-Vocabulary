@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PopupView">
+        <attr name="withText" format="string" />
+        <attr name="withImage" format="reference" />
+    </declare-styleable>
+</resources>

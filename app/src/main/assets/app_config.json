@@ -1,0 +1,40 @@
+{
+  "app_config": {
+    "default": {
+      "id": "/21617015150/2789052/21723122460",
+      "type": "ADX"
+    },
+    "use_default": false,
+    "interval_ads": 300000,
+    "after_ads": 3600000,
+    "disable_ads": false,
+    "is_show_lock": false,
+    "radom": 3,
+    "ads_ids": [
+      {
+        "id": "/21617015150/2789052/21723122460",
+        "type": "ADX"
+      },
+      {
+        "id": "161031088095888_161032468095750",
+        "type": "FACEBOOK"
+      },
+      {
+        "id": "/112517806/329121534775863",
+        "type": "ADX"
+      },
+      {
+        "id": "2890592",
+        "type": "UNITY"
+      },
+      {
+        "id": "FULL_ADS-4950445",
+        "type": "VUNGLE"
+      },
+      {
+        "id": "12345",
+        "type": "APPLOVIN"
+      }
+    ]
+  }
+}

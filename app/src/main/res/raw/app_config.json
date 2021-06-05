@@ -1,0 +1,86 @@
+{
+  "mediationConfig": {
+    "banner": [
+      {
+        "percent": 98,
+        "adNetworkId": "1"
+      },
+      {
+        "percent": 100,
+        "adNetworkId": "3"
+      },
+      {
+        "percent": 99,
+        "adNetworkId": "4"
+      }
+    ],
+    "interstitial": [
+      {
+        "percent": 98,
+        "adNetworkId": "1"
+      },
+      {
+        "percent": 100,
+        "adNetworkId": "3"
+      },
+      {
+        "percent": 99,
+        "adNetworkId": "4"
+      }
+    ],
+    "rewarded": [],
+    "native": [
+      {
+        "percent": 100,
+        "adNetworkId": "3"
+      },
+      {
+        "percent": 99,
+        "adNetworkId": "4"
+      }
+    ]
+  },
+  "adNetworkSettings": [
+    {
+      "adNetworkId": 1,
+      "appId": "ca-app-pub-3803907447401373~9612432262",
+      "banner": "ca-app-pub-3803907447401373\/3089996766",
+      "interstitial": "ca-app-pub-3803907447401373\/7885908312",
+      "rewarded": "",
+      "native": "",
+      "enabledFormats": 3,
+      "bannerClass": "AdmobBannerAdapter",
+      "interstitialClass": "AdmobInterstitialAdapter",
+      "rewardedClass": "AdmobRewardedAdapter",
+      "nativeClass": "AdmobNativeAdAdapter"
+    },
+    {
+      "adNetworkId": 3,
+      "appId": "",
+      "banner": "2055877658005406_2056343047958867",
+      "interstitial": "2055877658005406_2056343047958867",
+      "rewarded": "2055877658005406_2056343047958867",
+      "native": "2055877658005406_2056343047958867",
+      "enabledFormats": 11,
+      "bannerClass": "FanBannerAdapter",
+      "interstitialClass": "FanInterstitialAdapter",
+      "rewardedClass": "FanRewardedAdapter",
+      "nativeClass": "FanNativeAdAdapter"
+    },
+    {
+      "adNetworkId": 4,
+      "appId": "",
+      "banner": "\/112517806\/125661528966314",
+      "interstitial": "\/112517806\/325661528966314",
+      "rewarded": "",
+      "native": "\/112517806\/525661528966349",
+      "enabledFormats": 11,
+      "bannerClass": "AdxBannerAdapter",
+      "interstitialClass": "AdxInterstitialAdapter",
+      "rewardedClass": "AdxRewardedAdapter",
+      "nativeClass": "AdxNativeAdAdapter"
+    }
+  ],
+  "extraConfigs": {},
+  "interstitialInterval": 15
+}

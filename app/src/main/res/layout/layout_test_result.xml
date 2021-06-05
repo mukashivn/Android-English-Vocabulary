@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                style="@style/ImageViewStyle"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/margin_standard"
+                android:layout_marginTop="32dp"
+                android:src="@drawable/icc_cup"
+                android:tint="@color/yellow"
+            />
+
+            <TextView
+                android:id="@+id/test_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:textColor="#263238"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                tools:text="Poor, below the average." />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="sans-serif"
+                android:gravity="center_horizontal"
+                android:textColor="#263238"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                tools:text="Your score is:" />
+
+            <TextView
+                android:id="@+id/test_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="sans-serif"
+                android:gravity="center_horizontal"
+                android:textColor="#263238"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                tools:text="8 Correct and 21 Wrong" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/margin_short"
+            android:paddingTop="50dp">
+
+            <Button
+                android:id="@+id/cmd_exit"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_standard"
+                android:background="@android:color/transparent"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="Back to Topics"
+                android:textColor="#8a000000"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/cmd_test_again"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin_standard"
+                android:background="@android:color/transparent"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="Test agains"
+                android:textColor="#8a000000"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,96 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+        google()
+
+        maven {
+            url 'https://maven.fabric.io/public'
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.0.1'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+        classpath "io.realm:realm-gradle-plugin:5.1.0"
+        classpath 'com.jakewharton:butterknife-gradle-plugin:10.2.1'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.0'
+        classpath 'com.google.gms:google-services:4.3.3'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.2.0'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url "https://maven.google.com"
+        }
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+// Define versions in a single place
+ext {
+    // Sdk and tools
+    minSdkVersion = 19
+    targetSdkVersion = 29
+    compileSdkVersion = 29
+    buildToolsVersion = '29.0.2'
+
+    // App dependencies
+    supportLibraryVersion = '27.1.1'
+    gsonVersion = '2.8.0'
+    calligraphyVersion = '2.2.0'
+    espressoCoreVersion = '2.2.2'
+    butterKnifeVersion = '8.5.1'
+
+    //Retrofit
+    retrofitVersion = '2.5.0'
+    convertJsonVersion = '2.5.0'
+    okhttp3LogginInterceptorVersion = '3.12.1'
+
+    //Rx2Java
+    rxjava2Version = '2.2.16'
+    rxandroidVersion = '2.1.1'
+    rx2JavaAdapterVersion = '1.0.0'
+
+    //aspRationImage
+    aspRatioImageVersion = '1.0.3'
+    //Dagger
+    dagger2Version = '2.27'
+    annoationJsr250Version = '1.0'
+    javaxInjectVersion = '1'
+    retrolamdaVersion = '3.4.0'
+
+    //Test dependencies
+    junitVersion = '4.12'
+    espressoVersion = '2.2.2'
+    mockitoVersion = '2.28.2'
+
+    //Glide
+    glideVersion = '4.7.1'
+
+    //Multidex
+    multidexVersion = '1.0.3'
+
+    //Hide Keyboard
+    hideKeyBoardVersion = '1.0.0'
+
+    //Google Service
+    googleServiceVersion = '15.0.1'
+
+    //Facebook Android SDK
+    facebookSdkVersion = '4.33.0'
+
+
+}

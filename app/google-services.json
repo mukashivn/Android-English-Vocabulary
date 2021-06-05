@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "619514422565",
+    "firebase_url": "https://visual-english-vocabulary-test.firebaseio.com",
+    "project_id": "visual-english-vocabulary-test",
+    "storage_bucket": "visual-english-vocabulary-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:619514422565:android:39a22d61db01e99237a6cc",
+        "android_client_info": {
+          "package_name": "com.android.visual.english.test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "619514422565-plc8fvesep0ihr185bbu60jl9ucsf7if.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1XccugZCgk_8xaMrFKJrTpGdKgFPJr-I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "619514422565-plc8fvesep0ihr185bbu60jl9ucsf7if.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:619514422565:android:275a85d958c50b2b37a6cc",
+        "android_client_info": {
+          "package_name": "com.visual.english.test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "619514422565-plc8fvesep0ihr185bbu60jl9ucsf7if.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1XccugZCgk_8xaMrFKJrTpGdKgFPJr-I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "619514422565-plc8fvesep0ihr185bbu60jl9ucsf7if.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

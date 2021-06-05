@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="in_app_remove_ads" translatable="false">remove_ads</string>
+    <string name="in_app_package_test_2" translatable="false">packge_test_2</string>
+    <string name="in_app_pack_listen_2" translatable="false">pack_listen_2</string>
+</resources>

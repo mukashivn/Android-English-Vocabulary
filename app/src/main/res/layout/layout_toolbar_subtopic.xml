@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/action_bar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/action_bar_height"
+    android:background="@drawable/bg_toolbar"
+    >
+
+    <ImageButton
+        android:id="@+id/action_back"
+        style="@style/ImageViewStyle"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:padding="@dimen/margin_standard"
+        android:src="@drawable/arrow_back"
+        android:tint="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/layout_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/action_back"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/topic_title"
+            style="@style/TextViewStyle.ToolbarHead"
+            tools:text="People" />
+
+        <TextView
+            android:id="@+id/subtopic_title"
+            style="@style/TextViewStyle.SubToolbarHead"
+            android:visibility="visible"
+            tools:text="People"
+            tools:visibility="visible" />
+    </LinearLayout>
+</RelativeLayout>

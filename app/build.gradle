@@ -1,0 +1,175 @@
+//Import plugin cause Dagger
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+apply plugin: 'com.google.firebase.crashlytics'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "${parent.name}-${variant.name}-${variant.versionName}.apk"
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.android.visual.english.test"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 20
+        versionName "1.0"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled  true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+//    signingConfigs {
+//        debug {
+//            storeFile file("keystore.jks")
+//            storePassword "12345678"
+//            keyAlias "key0"
+//            keyPassword "12345678"
+//        }
+//        release {
+//            storeFile file("keystore.jks")
+//            storePassword "12345678"
+//            keyAlias "key0"
+//            keyPassword "12345678"
+//        }
+//    }
+
+    buildTypes {
+        debug {
+            buildConfigField("String", "BASE_URL", "\"https://acb.com.vn/\"")
+            buildConfigField("String", "BASE_WEB", "\"https://acb.com.vn/\"")
+            buildConfigField("String", "API_KEY", "\"ABCXYZ123TEST\"")
+            buildConfigField("String", "INAPP_BASE64", "\"fjakjfha+vIbLsgVMVIv0XJfcqSwwRjDiD9b4bxGOnAPIxl02Tl1A3WGyD5GBExm0X282S4RWDH6yUNwA1D7PJde7gxCqL1YAlscc4vZli5S42mMFZJRdlVCC7kdhzKCdaAU8sXPz1Z9MN5XgYzq0JeHiCmMLwWWmPpUJn04/s468pic9Mf+C2AB8sgNGmcDncjn/mCE5ARpzC2Zo+AZ9lLgAf+aZFiebNuUBVGGbYWC92MsAf7dq6mWjKM2VxGRfxOgo+kDjjQ+b/rPzO9nao2oG98dCLry7zvYQIDAQAB\"")
+            buildConfigField("String", "INAPP_MERCHANT_ID", "\"12345454543\"")
+            minifyEnabled false
+//            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            buildConfigField("String", "BASE_URL", "\"https://acb.com.vn/\"")
+            buildConfigField("String", "BASE_WEB", "\"https://acb.com.vn/\"")
+            buildConfigField("String", "API_KEY", "\"ABCXYZ123TEST\"")
+            buildConfigField("String", "INAPP_BASE64", "\"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8dasdasfadAMIIBCgKCgAQEAtTbpVz9Wknxuwx1SUFUIYtiWyGMQ5IKmzduLawbb4yh8JIeYFOncOByFh+vIbLsgVMVIv0XJfcqSwwRjDiD9b4bxGOnAPIxl02Tl1A3WGyD5GBExm0X282S4RWDH6yUNwA1D7PJde7gxCqL1YAlscc4vZli5S42mMFZJRdlVCC7kdhzKCdaAU8sXPz1Z9MN5XgYzq0JeHiCmMLwWWmPpUJn04/s468pic9Mf+C2AB8sgNGmcDncjn/mCE5ARpzC2Zo+AZ9lLgAf+aZFiebNuUBVGGbYWC92MsAf7dq6mWjKM2VxGRfxOgo+kDjjQ+b/rPzO9nao2oG98dCLry7zvYQIDAQAB\"")
+            buildConfigField("String", "INAPP_MERCHANT_ID", "\"12345454543\"")
+//            signingConfig signingConfigs.release
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    //Error:Conflict with dependency 'com.android.support:support-annotations' in project ':app'. Resolved versions for app (25.3.0) and test app (23.1.1) differ. See http://g.co/androidstudio/app-test-app-conflict for details.
+    //Error:Conflict with dependency 'com.google.code.findbugs:jsr305' in project ':app'. Resolved versions for app (1.3.9) and test app (2.0.1) differ. See http://g.co/androidstudio/app-test-app-conflict for details.
+    configurations.all {
+        resolutionStrategy.force "com.android.support:support-annotations:$rootProject.supportLibraryVersion"
+        resolutionStrategy.force "com.google.code.findbugs:jsr305:1.3.9"
+        //resolutionStrategy.force "com.google.android.gms:play-services-measurement-base:15.0.2"
+    }
+
+    packagingOptions{
+        exclude 'META-INF/rxjava.properties'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    // android support libraries
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.material:material:1.2.0'
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+    implementation 'androidx.vectordrawable:vectordrawable-animated:1.1.0'
+
+    // font
+    implementation 'io.github.inflationx:calligraphy3:3.1.1'
+    implementation 'io.github.inflationx:viewpump:2.0.3'
+
+    //Reactive
+    implementation "io.reactivex.rxjava2:rxjava:$rootProject.rxjava2Version"
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxandroidVersion"
+    implementation "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:$rootProject.rx2JavaAdapterVersion"
+
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.convertJsonVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.okhttp3LogginInterceptorVersion"
+
+    //Dagger
+    implementation "com.google.dagger:dagger:$rootProject.dagger2Version"
+    annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.dagger2Version"
+    compileOnly "javax.annotation:jsr250-api:$rootProject.annoationJsr250Version"
+    implementation "javax.inject:javax.inject:$rootProject.javaxInjectVersion"
+
+    // dependencies for local unit tests
+    testImplementation "junit:junit:$rootProject.ext.junitVersion"
+    testImplementation "org.mockito:mockito-core:$rootProject.mockitoVersion"
+    testAnnotationProcessor "com.google.dagger:dagger-compiler:$rootProject.dagger2Version"
+
+    // UI Testing
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-intents:3.2.0'
+    androidTestImplementation "org.mockito:mockito-core:$rootProject.mockitoVersion"
+    androidTestAnnotationProcessor "com.google.dagger:dagger-compiler:$rootProject.dagger2Version"
+
+    //ImageLoading
+    implementation "com.github.bumptech.glide:glide:$rootProject.glideVersion"
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    // code generator for view
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+
+    //For Multidex
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    //implementation "com.google.android.gms:play-services-ads:$rootProject.googleServiceVersion"
+
+    //Hide Keyboard
+    implementation "com.irozon.keyhide:keyhide:$rootProject.hideKeyBoardVersion"
+
+    implementation "com.github.santalu:aspect-ratio-imageview:$rootProject.aspRatioImageVersion"
+    //Bottom Sheet
+    implementation 'com.cocosw:bottomsheet:1.5.0@aar'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    //Facebook
+    implementation "com.facebook.android:facebook-android-sdk:$rootProject.facebookSdkVersion"
+    implementation 'com.facebook.android:audience-network-sdk:4.28.2'
+
+    //Firebase
+    //Firebase
+    implementation 'com.google.firebase:firebase-ads:19.3.0'
+    implementation 'com.google.firebase:firebase-core:17.4.4'
+    //implementation 'com.google.firebase:firebase-perf:16.2.0'
+    implementation 'com.google.firebase:firebase-config:19.2.0'
+    implementation 'com.google.firebase:firebase-messaging:20.2.4'
+    implementation 'com.google.firebase:firebase-analytics:17.4.4'
+
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
+
+    implementation project(':bill_library')
+
+    implementation 'com.github.salehyarahmadi:AndExAlertDialog:v1.0.1'
+}
+apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/item_root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_short"
+                android:layout_marginEnd="@dimen/margin_extra_short"
+                android:layout_marginStart="@dimen/margin_extra_short"
+                android:background="@drawable/bg_item_topic"
+>
+    <FrameLayout android:id="@+id/thum_layout"
+                 android:layout_width="match_parent"
+                 android:layout_height="@dimen/item_main_topic_height"
+    >
+        <ImageView
+            android:id="@+id/thumbnail"
+            style="@style/ImageViewItemTopic"
+            android:layout_gravity="center"
+            tools:src="@mipmap/ic_launcher"
+        />
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/thum_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/margin_short"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+    >
+        <TextView
+            android:id="@+id/en_title"
+            style="@style/TextViewStyle.ItemTopic"
+            android:gravity="center_horizontal"
+            tools:text="People"
+        />
+
+        <TextView
+            android:id="@+id/reg_title"
+            style="@style/TextViewStyle.ItemTopic"
+            android:gravity="center_horizontal"
+            android:textSize="12sp"
+            android:visibility="visible"
+            tools:text="People"
+            tools:visibility="visible"
+        />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/chevron"
+        style="@style/ImageViewStyle"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/margin_standard"
+        android:src="@drawable/chevron_right"
+        android:tint="@color/dark_gray"
+        android:visibility="gone"
+    />
+</RelativeLayout>

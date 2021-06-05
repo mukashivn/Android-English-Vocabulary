@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name" translatable="false">English Vocabulary</string>
+    <string name="double_click_to_exit">Double Click to exit app</string>
+    <string name="cmd_no">No</string>
+    <string name="cmd_yes">Yes</string>
+    <string name="don_t_ask_again">Don\'t Ask Again</string>
+
+    <!--Navigation-->
+    <string name="nav_rate_me">Rate now!</string>
+    <string name="nav_store">Store</string>
+    <string name="nav_feedback">Feedback</string>
+    <string name="nav_share">Share</string>
+    <string name="nav_about_us">About US</string>
+
+    <!--Bottom Sheet-->
+    <string name="bot_learn">Learn</string>
+    <string name="bot_flashcard">FlashCards</string>
+    <string name="bot_test">Test</string>
+    <string name="bot_writing">Writing</string>
+
+    <string name="bot_listening">Listening</string>
+    <string name="bot_speaking">Speaking</string>
+    <string name="bot_test2">Test-2</string>
+    <string name="bot_listening2">Listening-2</string>
+    <string name="bot_cancel">Cancel</string>
+    <string name="dialog_learn_title">Learn:</string>
+    <string name="meaning">Meaning:</string>
+    <string name="example">Example:</string>
+    <string name="cmd_next">Next</string>
+    <string name="cmd_flip">Flip</string>
+    <string name="cmd_back">Prev</string>
+    <string name="choose_answer_title">Choose the right answer:</string>
+    <string name="type_your_answer_title">Type the right answer:</string>
+    <string name="enter_answer_here_hint">Enter answer here</string>
+    <string name="correct_answer">Correct answer:</string>
+    <string name="listen_and_choose_title">Listen and Choose:</string>
+    <string name="cmd_true">True</string>
+    <string name="cmd_false">False</string>
+    <string name="pron_answer_title">Pronouce the answer:</string>
+    <string name="your_voice">Your answer:</string>
+
+    <string name="lang_eng">English</string>
+    <string name="lang_ger">Germany</string>
+    <string name="lang_spa">Spain</string>
+    <string name="lang_fra">France</string>
+    <string name="lang_rus">Russia</string>
+    <string name="lang_tur">Turkey</string>
+    <string name="lang_sau">Saudi Arabia</string>
+    <string name="lang_bra">Brazil</string>
+    <string name="lang_ind">India</string>
+    <string name="lang_jap">Japan</string>
+    <string name="lang_sou">South Korea</string>
+    <string name="lang_chi">China</string>
+    <string name="do_you_want_to_exit_the_task">Do you want to exit the task?</string>
+    <string name="purchase_content_2">People (Verbs)\nSchool (Verbs)\nHome (Verbs) 2\nSport (Verbs)</string>
+    <string name="purchase_content_3">People (Verbs) 2\nSchool (Verbs) 2\nLeisure (Verbs)\nHygiene (Verbs)</string>
+    <string name="not_good_at_all">Not good at all.</string>
+    <string name="result_test_poor">Poor, below the average.</string>
+    <string name="result_test_fairly">Fairly good.</string>
+    <string name="result_test_good">Good, above the average.</string>
+    <string name="result_test_ex">Excellent score!</string>
+
+    <string name="ask_later">ASK LATER</string>
+    <string name="remove_ads">Remove Ads</string>
+    <string name="learn_test_2">Learn Test-2</string>
+    <string name="learn_listing_2">Listening 2</string>
+    <string name="purchase_test_2_pack">Purchase test-2 pack.</string>
+    <string name="error_purchase">Error happend when do purchase</string>
+    <string name="billing_not_init">Billing not initialized. Please try again later.</string>
+    <string name="billing_not_avaiavle"><![CDATA[In-app billing service is unavailable.please upgrade Android Market/Play to version >= 3.9.16]]></string>
+    <string name="just_purchased">You purchased it</string>
+
+    <string name="purchase_title">THANK YOU VERY MUCH FOR USING OUR APP!</string>
+    <string name="cmd_purchase">Purchase</string>
+    <string name="cmd_showads">Continue with Ads</string>
+    <string name="purchase_message">This is FREE version and sime ads may appear during using time! \n You should upgrade to the PRO  version for the best experience! \n With PRO version you can: \n- Remove all ads during your using time \n- Be able add more location to trace \nThank you for your support</string>
+</resources>

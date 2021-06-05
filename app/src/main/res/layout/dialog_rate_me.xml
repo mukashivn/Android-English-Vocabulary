@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginBottom="16dp"
+    android:layout_marginTop="16dp"
+    android:background="@color/white"
+    android:gravity="center"
+    android:minWidth="300dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="32dp"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="8sp"
+        android:text="Rate us 5 stars if you love our "
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="normal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="8sp"
+        android:text="@string/app_name"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/margin_standard"
+        android:layout_marginTop="@dimen/margin_standard"
+        android:gravity="center"
+        android:orientation="horizontal"
+        >
+        <ImageView style="@style/ImageViewStyle"
+            android:padding="4dp"
+            android:src="@drawable/icon_rate"
+            />
+        <ImageView style="@style/ImageViewStyle"
+            android:padding="4dp"
+            android:src="@drawable/icon_rate"
+            />
+        <ImageView style="@style/ImageViewStyle"
+            android:padding="4dp"
+            android:src="@drawable/icon_rate"
+            />
+        <ImageView style="@style/ImageViewStyle"
+            android:padding="4dp"
+            android:src="@drawable/icon_rate"
+            />
+        <ImageView style="@style/ImageViewStyle"
+            android:padding="4dp"
+            android:src="@drawable/icon_rate"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/cmd_rate_now"
+        android:layout_width="156dp"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_rate"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="RATE NOW"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        />
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="32dp"
+
+        >
+        <Button
+            android:id="@+id/dont_again"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:background="@android:color/transparent"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="@string/don_t_ask_again"
+            android:textColor="#6f6f6f"
+            android:textStyle="bold"
+            />
+
+        <Button
+            android:id="@+id/ask_later"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="@string/ask_later"
+            android:textColor="#6f6f6f"
+            android:textStyle="bold"
+            />
+    </RelativeLayout>
+</LinearLayout>

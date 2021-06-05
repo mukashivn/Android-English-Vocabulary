@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- START xml_defaults -->
+<defaultsMap>
+    <entry>
+        <key>interval_ads</key>
+        <value>3600000</value>
+    </entry>
+    <entry>
+        <key>after_ads</key>
+        <value>14400000</value>
+    </entry>
+</defaultsMap>
+    <!-- END xml_defaults -->

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar_subtopic" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_xlarge"
+            android:layout_marginStart="@dimen/margin_xlarge"
+            android:layout_marginTop="@dimen/margin_standard"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/ads_root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_xlarge">
+
+                <TextView
+                    android:id="@+id/correct_count"
+                    android:layout_width="90dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_rect_gray"
+                    android:drawableTint="@color/colorTint"
+                    android:drawableStart="@drawable/icc_check_circle"
+                    android:gravity="center"
+                    android:paddingEnd="@dimen/margin_short"
+                    android:paddingStart="@dimen/margin_short"
+                    android:textColor="@color/colorTint"
+                    android:textStyle="normal"
+                    tools:text=": 99" />
+
+                <TextView
+                    android:id="@+id/wrong_count"
+                    android:layout_width="90dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/bg_rect_gray"
+                    android:drawableStart="@drawable/icc_check_cancel"
+                    android:gravity="center"
+                    android:paddingEnd="@dimen/margin_short"
+                    android:paddingStart="@dimen/margin_short"
+                    android:textColor="#f44336"
+                    tools:text=": 99" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/pron_answer_title"
+                android:textColor="#263238"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginBottom="@dimen/margin_xlarge"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:background="@drawable/bg_rect_gray"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/thumbnail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/margin_short"
+                    android:scaleType="center"
+                    tools:src="@drawable/baby" />
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_standard"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="#263238"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                tools:text="@string/your_voice"
+                android:id="@+id/your_voice"
+                />
+
+            <FrameLayout
+                android:layout_width="104dp"
+                android:layout_height="104dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_standard"
+                android:background="@drawable/bg_round_104">
+
+                <FrameLayout
+                    android:layout_width="84dp"
+                    android:layout_height="84dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_round_84">
+
+                    <ImageView
+                        android:id="@+id/cmd_voidce"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/icc_voice" />
+                </FrameLayout>
+            </FrameLayout>
+            <com.core.app.ui.custom.NativeAdsView
+                android:id="@+id/nativeAdsView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_standard"
+                android:layout_marginEnd="@dimen/margin_standard"
+            />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

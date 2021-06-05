@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/bot_learn"
+          android:icon="@drawable/bot_learn"
+          android:iconTint="@color/colorTint"
+          android:title="@string/bot_learn"/>
+    <item android:id="@+id/bot_flashcard"
+          android:icon="@drawable/bot_flashcard"
+          android:iconTint="@color/colorTint"
+          android:title="@string/bot_flashcard"
+    />
+    <item android:id="@+id/bot_test"
+          android:icon="@drawable/bot_test"
+          android:iconTint="@color/colorTint"
+          android:iconTintMode="add"
+          android:title="@string/bot_test"
+    />
+
+    <item android:id="@+id/bot_writing"
+          android:icon="@drawable/bot_writting"
+          android:iconTint="@color/colorTint"
+          android:title="@string/bot_writing"
+    />
+    <item android:id="@+id/bot_listening"
+          android:icon="@drawable/bot_listening"
+          android:iconTint="@color/colorTint"
+          android:title="@string/bot_listening"
+    />
+    <item android:id="@+id/bot_speaking"
+          android:icon="@drawable/bot_speaking"
+          android:iconTint="@color/colorTint"
+          android:title="@string/bot_speaking"
+    />
+
+    <item android:id="@+id/bot_test2"
+          android:icon="@drawable/bot_test_2"
+          android:iconTint="@color/colorTint"
+          android:title="@string/bot_test2"
+    />
+    <item android:id="@+id/bot_listening2"
+          android:icon="@drawable/bot_listening_2"
+          android:iconTint="@color/colorTint"
+          android:title="@string/bot_listening2"
+    />
+    <item android:id="@+id/bot_cancel"
+          android:icon="@drawable/bot_cancel"
+          android:iconTint="@color/colorTint"
+          android:title="@string/bot_cancel"
+    />
+
+</menu>
